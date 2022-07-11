@@ -1,0 +1,8 @@
+.floorSize {
+    width: 500px;
+    height: 200px;
+    border-color: black;
+    border-style:solid;
+    margin: 20px;
+    text-align: center;
+}

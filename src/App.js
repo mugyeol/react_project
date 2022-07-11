@@ -1,7 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import Snacks from './component/Snacks'
+import Foods from './component/Foods';
+import Floor from './component/Floor';
 
-const cooks = [
+
+const snacks = [
 
   { dishes: "kimchi",
     image: 
@@ -10,9 +14,9 @@ const cooks = [
 
     { dishes: "tamagoyaki",
       image: "https://daebakkitchen.hk/wp-content/uploads/2021/03/%EA%B3%84%EB%9E%80%EB%A7%90%EC%9D%B4.jpg",
-},
-
-
+}
+]
+const foods = [
 {  dishes: "medamayaki",
 image: 
 "https://t1.daumcdn.net/cfile/tistory/99EB093A5C7289111F",
@@ -27,24 +31,25 @@ image:
 
 ]
 
-function Snacks({name, image}){
-  return <div> <h2> My granny cooked very well. It was {name}. </h2>
 
-  See it. <img src= {image} /> 
-  
-  </div>
-  }
 
 function App() {
-  return (
+  return <div><div><h1>더큰내일</h1><Floor level="1st"/><Floor level="2st"/><Floor level="3st"/></div>
+  
+
     <div>
-    <h1> Hi. </h1>
-    {cooks.map(map => 
+    <h1> Snacks </h1>
+    {snacks.map(map => 
     <Snacks name={map.dishes} image={map.image}/>
     )}
+    <h1> Foods </h1>
+    {foods.map(map => 
+    <Foods name={map.dishes} image={map.image}/>
+    )}
+    </div>
 
   </div>
-  );
+  
 }
 
 
